@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:;"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link href="./home.css" rel="stylesheet" />
+
+    
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="title-bar">
+        <button class="save-btn" id="save-btn">Save</button>
+        <div></div>
+        <img
+          id="minimize"
+          src="../materials/remove_24dp_000000_FILL0_wght400_GRAD0_opsz24.png"
+          alt="- button"
+        />
+        <img
+          id="maximize"
+          src="../materials/check_box_outline_blank_24dp_000000_FILL0_wght400_GRAD0_opsz24.png"
+          alt="[] button"
+        />
+        <img
+          id="close"
+          src="../materials/close_24dp_000000_FILL0_wght400_GRAD0_opsz24.png"
+          alt="x button"
+        />
+      </div>
+      
+      <div class="save-file" id="save-file">
+        <span class="close" id="closeModal">&times;</span>
+        <form id="save-details">
+          <select id="folder" name="folder">
+            <option value="">Select</option>
+            <option value="UID">UID</option>
+            <option value="OOPs">OOPs</option>
+            <option value="ADM">ADM</option>
+            <option value="Discrete_math">Discrete_math</option>
+            <option value="Linear_algebra">Linear_algebra</option>
+            <option value="Modern_phy">Modern_phy</option>
+          </select>
+          <input name="file-name" id="file-name" type="text">
+          <input type="submit">
+        </form>
+      </div>
+      <div class="file-editor-div">
+        <div id="sidebar" class="sidebar">
+          <h3>Subjects</h3>
+          <div id="subjects-list" class="subjects-list"></div>
+          <h3 class="notes-heading">Notes</h3>
+          <div id="notes-list" class="notes-list"></div>
+      </div>
+        <div class="editor" id="editor" contenteditable="true"></div>
+      </div>    
+    </div>
+    <script src="../src/home.js"></script>
+  </body>
+</html>
